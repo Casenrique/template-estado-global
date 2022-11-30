@@ -13,13 +13,15 @@ export default function CardCarrinho({
 
   return (
     <CardContainer>
-      <Image src={"https://www.proativaalimentos.com.br/image/cache/catalog/img_prod/oleo-essencia-morango-100ml-fruta-puro-essencia-massagem-D_NQ_NP_960102-MLB31202671230_062019-F[1]-1000x1000.jpg"} />
-      <p>{"Morango"}</p>
+      <Image src={url} />
+      <p>{name}</p>
       <p>
-        Qtd <b>{1}</b>
+        Qtd <b>{amount}</b>
       </p>
-      <p>R${10}</p>
-      <DeleteButton>x</DeleteButton>
+      <p>R${price}</p>
+      <DeleteButton
+        onClick={() => deleteItem(id)}
+      >x</DeleteButton>
     </CardContainer>
   );
 }
